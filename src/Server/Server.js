@@ -8,7 +8,6 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
-// ✅ ROTA GET - Busca os produtos do banco
 app.get('/api/produtos', async (req, res) => {
   try {
     const [rows] = await db.execute('SELECT id, nome, descricao, preco, imagem FROM produtos');
@@ -19,7 +18,6 @@ app.get('/api/produtos', async (req, res) => {
   }
 });
 
-// ✅ ROTA POST - Salva o e-mail na tabela inscritos
 app.post('/api/inscricao', async (req, res) => {
   const { email_inscrito } = req.body;
 
@@ -43,7 +41,7 @@ app.post('/api/inscricao', async (req, res) => {
   }
 });
 
-// Inicia o servidor
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
+
 });

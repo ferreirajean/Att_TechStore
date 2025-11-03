@@ -1,13 +1,10 @@
-// URL do backend
 const API_URL = "http://localhost:3000";
 
-// Elementos da página
 const gridProdutos = document.getElementById("grid-produtos");
 const form = document.getElementById("form-inscricao");
 const emailInput = document.getElementById("email");
 const mensagem = document.getElementById("mensagem");
 
-// 1️⃣ Buscar produtos ao carregar a página
 async function carregarProdutos() {
   try {
     const response = await fetch(`${API_URL}/api/produtos`);
@@ -18,7 +15,6 @@ async function carregarProdutos() {
     
     const produtos = await response.json();
 
-    // Limpa e insere os produtos dinamicamente
     gridProdutos.innerHTML = "";
     produtos.forEach(produto => {
       const card = document.createElement("div");
@@ -41,14 +37,12 @@ async function carregarProdutos() {
   }
 }
 
-// 2️⃣ Validar e enviar e-mail do formulário
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const email = emailInput.value.trim();
   mensagem.textContent = "";
 
-  // Validação de e-mail
   const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email) {
     mensagem.textContent = "Por favor, digite seu e-mail.";
@@ -61,7 +55,6 @@ form.addEventListener("submit", async (event) => {
     return;
   }
 
-  // Envio para o backend
   try {
     const resposta = await fetch(`${API_URL}/api/inscricao`, {
       method: "POST",
@@ -91,5 +84,4 @@ form.addEventListener("submit", async (event) => {
   }
 });
 
-// Executa ao iniciar
 carregarProdutos();

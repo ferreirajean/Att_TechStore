@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStore</title>
+  <link rel="stylesheet" href="./src/css/Style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <header class="navbar">
+    <h1>TechStore</h1>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#newsletter">Inscreva-se</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="produtos" class="produtos-section">
+      <h2>Produtos em destaque</h2>
+      <div id="grid-produtos" class="grid-produtos"></div>
+    </section>
+
+    <section id="newsletter" class="newsletter-section">
+      <h2>Assine nossa newsletter</h2>
+      <form id="form-inscricao" class="form-newsletter">
+        <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+        <button type="submit">Inscrever</button>
+      </form>
+      <div id="mensagem"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 TechStore - Todos os direitos reservados</p>
+  </footer>
+
+  <script src="./src/JavaScript/Script.js"></script>
+
+</body>
+</html>

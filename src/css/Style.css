@@ -1,4 +1,4 @@
-/* Fonte e reset */
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 * {
@@ -13,7 +13,6 @@ body {
   color: #000;
 }
 
-/* Navbar */
 .navbar {
   background-color: #333;
   color: #fff;
@@ -38,7 +37,6 @@ body {
   text-decoration: underline;
 }
 
-/* Produtos */
 .produtos-section {
   padding: 50px 20px;
   text-align: center;
@@ -104,7 +102,6 @@ body {
   background-color: #999;
 }
 
-/* Newsletter */
 .newsletter-section {
   background-color: #b5b3b3;
   padding: 40px 20px;
@@ -146,7 +143,6 @@ body {
   background-color: #666;
 }
 
-/* Rodapé */
 .footer {
   background-color: #4f4f4f;
   color: #fff;
@@ -155,8 +151,6 @@ body {
   font-size: 0.9rem;
 }
 
-
-/* Responsividade */
 @media(max-width: 600px) {
   .navbar .container {
     flex-direction: column;
@@ -167,3 +161,4 @@ body {
     align-items: center;
   }
 }
+
